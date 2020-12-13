@@ -118,6 +118,7 @@ const fi = (function() {
       }
       return newArr
     },
+<<<<<<< HEAD
     unpack: function(receiver, arr) {
       for (let val of arr)
         receiver.push(val)
@@ -150,6 +151,36 @@ const fi = (function() {
         return Array.from(uniqVals)
       }
     },
+=======
+    
+    uniq: function(array, isSorted, callback){
+      if(isSorted){
+      let newArr=[array[0]];
+      for(let i=0;i<array.length;i++){
+        if(newArr[i]!== array[i+1]){
+          newArr.push(array[i+1]);
+        }
+      }
+       return newArr; 
+      } else if (!callback){
+        return Array.from(collection)
+        
+      }
+      else{
+      let mod=[];
+      let newArr=[]
+      for(let i=0; i<Array.length;i++){
+        if(!mod.includes(callback(val))){
+          mod.add(callback(val));
+          newArr.add(val);
+        }
+      }
+      return newArr;
+      }
+       
+      }
+    ,
+>>>>>>> e234c0854fc3fa6259b105d21a0e39a09bda0222
      keys: function(obj) {
       const keys = []
       for (let key in obj){
@@ -169,7 +200,11 @@ const fi = (function() {
     functions: function(object) {
       let fct=[]
     for(let key in object){
+<<<<<<< HEAD
       if(typeof object[key] === "function"){
+=======
+      if(typeofe(object[key])===function){
+>>>>>>> e234c0854fc3fa6259b105d21a0e39a09bda0222
         fct.push(key)
       }
     }
