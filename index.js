@@ -118,7 +118,6 @@ const fi = (function() {
       }
       return newArr
     },
-<<<<<<< HEAD
     unpack: function(receiver, arr) {
       for (let val of arr)
         receiver.push(val)
